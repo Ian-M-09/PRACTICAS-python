@@ -50,11 +50,11 @@ while prod==1:
     prod=int(input("Desea cargar productos?: 1=seguir, 2=detener "))
 
 vec_nvo=[]
-
+# 
 for i in range(len(v)):
     b=False
     for j in range(len(vec_nvo)):
-        if vec_nvo[j][0]==v[i]:
+        if vec_nvo[j][0]==v[i]:# [j] marca la posicion
             vec_nvo[j][1]+=1
             b=True
     if b==False:
@@ -62,6 +62,11 @@ for i in range(len(v)):
 for i in range(len(vec_nvo)):
     print()
     print("tipo de consumo:",vec_nvo[i][0],"- cantidad:",vec_nvo[i][1])
+"""vec_nvo=[[pizza,3],[agua,5]]
+    vec_nvo=[[elemento1,cant1],[elemento2,cant2]]
+    vec_nvo[j][1]
+    
+"""
 
 max1=0
 max2=0
