@@ -8,7 +8,7 @@ El objetivo de este repositorio es que puedan consultar la sintaxis vista, repas
 
 ## 📂 Contenido del Repositorio
 
-El material se organiza principalmente por temáticas, nombres y clases:
+El material se organiza principalmente por temáticas, nombres y clases dentro de la carpeta Clases Particulares:
 
 * **Sintaxis y Fundamentos:** Manejo de variables, tipos de datos primitivos, condicionales (`if / elif / else`) y estructuras de control iterativas (`for`, `while`).
 * **Vectores y Arreglos (`list`):** Operaciones nativas, indexación, rebanado (*slicing*) y métodos de inserción/borrado.
