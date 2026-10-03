@@ -41,8 +41,8 @@ print(sexo)"""
 #---------------------------------------------------
 #segundo parcial 09/10/2025
 prod=int(input("Desea cargar productos?: 1=seguir, 2=detener "))
-#ingresar un nuevo elemento con .append
-v=[]#no tiene un tamaño definido ni elementos
+
+v=[]
 while prod==1:
     consumos=str(input("ingrese el tipo de consumo (producto): "))
     v.append(consumos)
@@ -51,21 +51,14 @@ while prod==1:
 
 vec_nvo=[]
 
-for i in range(len(v)):#toma cada elemento de v y lo guarda en consumo para compararlo 
+for i in range(len(v)):
     b=False
-    #en ciclos anidados los indices deben ser distintos
-    for j in range(len(vec_nvo)):#recorro vec_nvo para ver si el consumo ya esta en vec_nvo
-        if vec_nvo[j][0]==v[i]:#el nec_nvo es una estructura de datos que tiene 2 elementos, el primero es el tipo de consumo y el segundo es la cantidad de veces que se repite
-            vec_nvo[j][1]+=1# basicamente es una estructura donde con [1] accedo al contador de cada tipo de consumo
+    for j in range(len(vec_nvo)):
+        if vec_nvo[j][0]==v[i]:
+            vec_nvo[j][1]+=1
             b=True
-    if b==False:#se agrega un nuevo elemento si es que no lo encuentra en vec_nvo
-        vec_nvo.append([v[i],1])#agrega un nuevo elemento donde v[i] es el tipo de consumo y 1 es la segunda posicion que es el contador de veces que se repite ese tipo de consumo
-"""uso de estructuras:
-vec_nvo=[[producto,cantidad],[producto2,cantidad2],[producto3,cantidad3]]
-accedo a producto con el [0] y a cantidad con el [1]. [j] es la posicion
-si en algun momento necesito agregar otro campo a la estructura hago:
-vec_nvo.append([elemento1,elemento2,elemento3])
-ahora el nuevo campo accedo con [2]"""
+    if b==False:
+        vec_nvo.append([v[i],1])
 for i in range(len(vec_nvo)):
     print()
     print("tipo de consumo:",vec_nvo[i][0],"- cantidad:",vec_nvo[i][1])
@@ -74,7 +67,7 @@ max1=0
 max2=0
 ind1=0
 ind2=0
-#indice= variable (no interesa el nombre)
+
 for i in range(len(vec_nvo)):
     if vec_nvo[i][1]>max1:
         max2=max1
