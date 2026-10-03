@@ -149,7 +149,7 @@ else:
 # ==========================================
 arr_binaria = [11, 12, 22, 25, 64]  # Arreglo ya ordenado
 objetivo = 22
-i=1
+i=0
 n=len(arr_binaria)
 med=i+n//2
 while i<=n and arr_binaria[med]!=objetivo:
@@ -159,6 +159,9 @@ while i<=n and arr_binaria[med]!=objetivo:
         n=med-1
     med=(i+n)//2
 if i<=n:
+    print(f"Búsqueda binaria: elemento {objetivo} encontrado en el índice {med}")
+else:
+    print(f"Búsqueda binaria: elemento {objetivo} no encontrado")
 
 #===========================
 #segundo parcial 09/10/2025
