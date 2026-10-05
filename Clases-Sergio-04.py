@@ -13,7 +13,7 @@ while resp==1:
 i=0
 while i<len(A):
     j=i+1
-    while j<len(A):
+    while j<=len(A):
         if A[i]["DNI"]==A[j]["DNI"]:
             A.pop(j)
             print("Se elimino DNI repetido")
@@ -27,9 +27,12 @@ for i in range(len(A)):
     d=A[i]["DNI"]
     long=str(len(a))
     longn=str(len(n))
+    # sumar digitos num=long+longn
+    #x=str(num)
     p_a=a[:3]
     uldni=str(d)[-3:]
     token=long+longn+p_a+uldni
+    #token=x+p_a+uldi
     dictoken={"ape":a,"nom":n,"dn":d,"tok":token}
     B.append(dictoken)
 
