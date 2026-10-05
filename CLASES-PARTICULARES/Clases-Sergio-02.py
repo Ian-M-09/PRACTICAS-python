@@ -16,3 +16,17 @@ while res==1:
             sexo=input("ingrese el sexo de la persona (Masculino/Femenino):")[0]
             V1.append([nombre,apellido,DNI,sexo])
     res=int(input("desea ingresar un socio?: 1=seguir; 2=detener: "))
+#=========================
+n=10
+arr_seleccion=[]
+for i in range(len(V1)-1):
+    for j in range(i+1,len(V1)):
+        if V1[i][2] > V1[j][2]:
+            aux=V1[i]
+            V1[i]=V1[j]
+            V1[j]=aux
+for i in range(len(V1)):
+    print("Ordenado por seleccion:", V1[i])
+    
+    
+

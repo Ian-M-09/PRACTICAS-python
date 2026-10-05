@@ -1,20 +1,20 @@
 
 
-edad = 16             
-precio = 19.99         
-nombre = "Carlos"      
-activo = True         
+edad = 16 #int            
+precio = 19.99 #float         
+nombre = "Carlos" #str  
+activo = True #boole
 
 
-if edad >= 18:
+if edad >= 18:#si
     print(f"{nombre} es mayor de edad")  
-elif edad > 13:
+elif edad > 13:#sino
     print("Es adolescente")
-else:
+else:#no
     print("Es menor")
 
 
-for i in range(5):     
+for i in range(5):#sintaxis range(inicio,fin,paso)
     print(i)
 
 contador = 3
@@ -43,18 +43,18 @@ invertido = numeros[::-1]
 vec = [1, 2, 3]
 
 
-vec.append(4)          
-vec.insert(1, 99)     
+vec.append(4)#agregar al final          
+vec.insert(1, 99)#agregar en una posicion sintaxis (posicion,elemento)
 vec.extend([5, 6])   
 
 
-vec.pop()             
-vec.pop(1)             
+vec.pop()#elimina el ultimo           
+vec.pop(1)#elimino el elemento de la posicion 1             
 vec.remove(3)        
 # del vec[0]           
 
 
-posicion = vec.index(2) 
+posicion = vec.index(2)#te devuelve la posicion del elemento 2 
 existe = 2 in vec      
 
 vec.sort()             
@@ -63,7 +63,7 @@ vec.reverse()
 
 datos = [4, 1, 9, 2, 8]
 
-longitud = len(datos)  
+longitud = len(datos)#te da el tamaño
 maximo = max(datos)     
 minimo = min(datos)     
 suma = sum(datos)       
@@ -83,14 +83,13 @@ for idx, fruta in enumerate(frutas):
 
 cuadrados = [x**2 for x in range(1, 6)]          
 pares = [x for x in range(10) if x % 2 == 0]    
-
+#mod cambia por % y el div 0 / cambia //
 
 arr_seleccion = [64, 25, 12, 22, 11]
 n = len(arr_seleccion)
 
 for i in range(n-1):
-    j=i+1
-    for j in range(n):
+    for j in range(i+1,n):
         if arr_seleccion[i] > arr_seleccion[j]:
             aux=arr_seleccion[i]
             arr_seleccion[i]=arr_seleccion[j]
@@ -207,7 +206,3 @@ for i in range(len(vec_nvo)):
 for i in range(len(vec_1vez)):
     print()
     print("Los productos que se consumieron mas de 1 vez son: ",vec_1vez[i])
-    
-    print(f"Búsqueda binaria: elemento {objetivo} encontrado en el índice {med}")
-else:
-    print(f"Búsqueda binaria: elemento {objetivo} no encontrado")
