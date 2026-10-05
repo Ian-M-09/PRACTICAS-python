@@ -42,6 +42,38 @@ invertido = numeros[::-1]
 
 vec = [1, 2, 3]
 
+# Lista vacía que actuará como vector
+vector = []
+
+# Crear diccionarios
+diccionario1 = {"nombre": "Ana", "edad": 25,"dni": 12345678}
+diccionario2 = {"nombre": "Luis", "edad": 30}
+#sintaxis de diccionario: {clave1: valor1, clave2: valor2, ...}
+
+# Agregar diccionarios a la lista
+vector.append(diccionario1)
+vector.append(diccionario2)
+
+# También se puede agregar directamente sin crear la variable
+vector.append({"nombre": "Marta", "edad": 28})
+
+# Mostrar el vector completo
+print("Vector con diccionarios:", vector)
+
+# Acceder al primer diccionario
+primer_diccionario = vector[0]
+print("Primer diccionario:", primer_diccionario)
+
+# Acceder a la edad del primer diccionario
+edad_ana = vector[0]["edad"]
+print("Edad de Ana:", edad_ana)
+
+# Acceder al nombre del segundo diccionario
+nombre_luis = vector[1]["nombre"]
+print("Nombre del segundo diccionario:", nombre_luis)
+
+for i in range(len(vector)):
+    print(vector[i]["nombre"], vector[i]["edad"])
 
 vec.append(4)#agregar al final          
 vec.insert(1, 99)#agregar en una posicion sintaxis (posicion,elemento)
