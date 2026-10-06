@@ -13,7 +13,7 @@ while resp==1:
 i=0
 while i<len(A):
     j=i+1
-    while j<=len(A):
+    while j<len(A):
         if A[i]["DNI"]==A[j]["DNI"]:
             A.pop(j)
             print("Se elimino DNI repetido")
