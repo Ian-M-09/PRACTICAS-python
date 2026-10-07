@@ -16,14 +16,14 @@ ordenados por cantidad de Socios en forma decreciente.
 A=[]
 B=[]
 C=[]
-opc=input("Desea seguir cargando? si/no: ")[0]
+opc=input("Desea seguir cargando? si/no: ")[0].upper()
 #upper convierte la respuesta de caracteres a mayuscula
-while opc=="s":
+while opc=="S":
     ape=input("Ingrese apellido: ")
     dni=int(input("Ingrese DNI: "))
     dis=input("Ingrese disiciplina: ")
     i=0
-    while i<len(A):
+    while i<len(A):#recomiendo usar este metodo para verificar que el dni no se encuentre en la lista
         if dni==A[i]["DNI"]:
             print("El DNI esta repetido ingrese uno valido ")
             dni=int(input("Ingrese DNI: "))
@@ -32,7 +32,7 @@ while opc=="s":
             i+=1 #avanzo i
     socio={"apellido":ape,"DNI":dni,"disciplina":dis}#creo el diccionario luego de verificar si el dni esta bien
     A.append(socio)
-    opc=input("Desea seguir cargando? si/no: ")[0]
+    opc=input("Desea seguir cargando? si/no: ")[0].upper()  
     
 """
 otra forma de verificar si el dni esta repetido
@@ -88,4 +88,4 @@ for i in range(len(A)):
 C.sort(key=lambda x:x["cantidad"], reverse=True)
 
 for i in range(len(C)):
-    print("Los deportes con mayor cantidad son: ",C[i]["disciplina"],"la cantidad es: ",C[i]["cantidad"])
+    print("Los deportes ordenados por cantidad son: ",C[i]["disciplina"],"la cantidad es: ",C[i]["cantidad"])
