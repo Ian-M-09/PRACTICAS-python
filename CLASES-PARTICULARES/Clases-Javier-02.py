@@ -61,4 +61,3 @@ for i in range(len(B)):
     print("Apellido: ",B[i][0])
     print("Nombre: ",B[i][1])
     print("Codigo: ",B[i][2])
-

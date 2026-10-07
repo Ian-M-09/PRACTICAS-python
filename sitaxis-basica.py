@@ -56,7 +56,12 @@ vector.append(diccionario2)
 
 # También se puede agregar directamente sin crear la variable
 vector.append({"nombre": "Marta", "edad": 28})
-
+#si quiero usar sort para ordenar diccionarios hago
+vector.sort(lambda x:x["edad"])#va a ordenar el vector B por edades de menor a mayor
+vec.sort(lambda x:x["edad"], reverse=True)# ordena de mayor a menor
+# Lambda me permite crear funciones anónimas en una sola línea
+# En 'lambda x: x["edad"]', 'x' es el diccionario que entra como parámetro, 
+# y la función le devuelve el valor de x["edad"] al método sort() para que sepa qué comparar.
 # Mostrar el vector completo
 print("Vector con diccionarios:", vector)
 
@@ -89,8 +94,8 @@ vec.remove(3)
 posicion = vec.index(2)#te devuelve la posicion del elemento 2 
 existe = 2 in vec      
 
-vec.sort()             
-vec.sort(reverse=True)  
+vec.sort()#ordena de menor a mayor             
+vec.sort(reverse=True)#ordena de mayor a menor
 vec.reverse()           
 
 datos = [4, 1, 9, 2, 8]

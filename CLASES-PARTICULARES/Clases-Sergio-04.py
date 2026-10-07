@@ -9,7 +9,6 @@ while resp==1:
     A.append(empleado)
     resp=int(input("Desea cargar un empleado 1=seguir/2=detener: "))
 
-#recorrer A, bandera?, 
 i=0
 while i<len(A):
     j=i+1
