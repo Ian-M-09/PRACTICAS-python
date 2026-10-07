@@ -1,5 +1,3 @@
-
-
 edad = 16 #int            
 precio = 19.99 #float         
 nombre = "Carlos" #str  
@@ -32,22 +30,28 @@ print(saludar("ian"))
 numeros = [10, 20, 30, 40, 50]
 vacio = []
 
+primer = numeros[0]#primer elemento del vector
+ultimo = numeros[-1]#ultimo elemento del vector
+print(primer)
+print(ultimo)
+sub_vector = numeros[1:4] #me da los elementos desde la posicion 1 hasta la 4 y los guarda en otro vector
+print()
+invertido = numeros[::-1]  #me da vuelta el vector 
 
-primer = numeros[0]    
-ultimo = numeros[-1]   
-
-
-sub_vector = numeros[1:4]  
-invertido = numeros[::-1]  
+for i in range(len(sub_vector)):
+    print(sub_vector[i])
+print()
+for i in range(len(invertido)):
+    print(invertido[i])
 
 vec = [1, 2, 3]
 
 # Lista vacía que actuará como vector
 vector = []
-
+#vec=[None]*n
 # Crear diccionarios
 diccionario1 = {"nombre": "Ana", "edad": 25,"dni": 12345678}
-diccionario2 = {"nombre": "Luis", "edad": 30}
+diccionario2 = {"nombre": "Ian", "edad": 30}
 #sintaxis de diccionario: {clave1: valor1, clave2: valor2, ...}
 
 # Agregar diccionarios a la lista
@@ -57,8 +61,8 @@ vector.append(diccionario2)
 # También se puede agregar directamente sin crear la variable
 vector.append({"nombre": "Marta", "edad": 28})
 #si quiero usar sort para ordenar diccionarios hago
-vector.sort(lambda x:x["edad"])#va a ordenar el vector B por edades de menor a mayor
-vec.sort(lambda x:x["edad"], reverse=True)# ordena de mayor a menor
+vector.sort(key=lambda x:x["edad"])#va a ordenar el vector B por edades de menor a mayor
+#vec.sort(key=lambda x:x["edad"],reverse=True)# ordena de mayor a menor 
 # Lambda me permite crear funciones anónimas en una sola línea
 # En 'lambda x: x["edad"]', 'x' es el diccionario que entra como parámetro, 
 # y la función le devuelve el valor de x["edad"] al método sort() para que sepa qué comparar.
@@ -79,7 +83,6 @@ print("Nombre del segundo diccionario:", nombre_luis)
 
 for i in range(len(vector)):
     print(vector[i]["nombre"], vector[i]["edad"])
-
 vec.append(4)#agregar al final          
 vec.insert(1, 99)#agregar en una posicion sintaxis (posicion,elemento)
 vec.extend([5, 6])   
@@ -105,22 +108,17 @@ maximo = max(datos)
 minimo = min(datos)     
 suma = sum(datos)       
 ordenada = sorted(datos)
-
 frutas = ["manzana", "banana", "cereza"]
-
 
 for fruta in frutas:
     print(fruta)
 
-
-
 for idx, fruta in enumerate(frutas):
     print(f"Posición {idx}: {fruta}")
 
-
 cuadrados = [x**2 for x in range(1, 6)]          
 pares = [x for x in range(10) if x % 2 == 0]    
-#mod cambia por % y el div 0 / cambia //
+#mod cambia por % y el div cambia //
 
 arr_seleccion = [64, 25, 12, 22, 11]
 n = len(arr_seleccion)
@@ -134,7 +132,6 @@ for i in range(n-1):
 print("Ordenado por seleccion:", arr_seleccion)
 
 
-
 n=int(input("ingrese el tamaño del vector:"))
 v=[]
 v.append(int(input("ingrese el primer numero:")))
@@ -142,7 +139,7 @@ for i in range (1,n):
     v.append(int(input(f"ingrese el numero {i+1}:")))
     aux=v[i]
     j=i-1
-    while(aux<v[j] and j>=0):
+    while(j>=0 and aux<v[j]):
         v[j+1]=v[j]
         j=j-1
     v[j+1]=aux
