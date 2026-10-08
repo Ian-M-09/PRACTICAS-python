@@ -42,5 +42,3 @@ for i in range(len(B)):
     print("La palabra es: ",B[i]["palabra"])
     print("La frecuencia es: ",B[i]["frecuencia"])
     print("El porcentaje es: ",B[i]["porcentaje"])
-    
-    

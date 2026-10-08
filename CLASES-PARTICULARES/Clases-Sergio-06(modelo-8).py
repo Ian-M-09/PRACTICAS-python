@@ -56,9 +56,9 @@ for i in range(len(A)):
     d=A[i]["DNI"]
     long=str(len(a))
     c_a=a[:2]
-    u_d=str(d)[::-3]
+    u_d=str(d)[-3:]
     codigo=long+c_a+u_d
-    sociot={"Apellido":a,"DNI":d,"credencial":codigo}
+    sociot={"Apellido":A[i]["apellido"],"DNI":d,"credencial":codigo}
     B.append(sociot)
 
 B.sort(key=lambda x:x["Apellido"])
