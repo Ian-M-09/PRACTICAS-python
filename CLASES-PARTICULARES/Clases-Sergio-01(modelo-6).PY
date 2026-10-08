@@ -50,7 +50,7 @@ while prod==1:
     prod=int(input("Desea cargar productos?: 1=seguir, 2=detener "))
 
 vec_nvo=[]
-# 
+
 for i in range(len(v)):
     b=False
     for j in range(len(vec_nvo)):
@@ -67,7 +67,17 @@ for i in range(len(vec_nvo)):
     vec_nvo[j][1]
     
 """
-
+for i in range(len(v)):
+    b=False
+    con=v[i]
+    for j in range(len(vec_nvo)):
+        if vec_nvo[j]["consumicion"]==v[i]:
+            vec_nvo[j]["cantidad"]+=1
+            b=True
+    if b==False:
+        dicresumen={"consumicion":con,"cantidad":1}
+        vec_nvo.append(dicresumen)
+        #es lo mismo usar v[i] que usar con
 max1=0
 max2=0
 ind1=0

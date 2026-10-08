@@ -16,7 +16,7 @@ ordenados por cantidad de Socios en forma decreciente.
 A=[]
 B=[]
 C=[]
-opc=input("Desea seguir cargando? si/no: ")[0].upper()
+opc=input("Desea seguir cargando? si/no: ")[0].upper()#
 #upper convierte la respuesta de caracteres a mayuscula
 while opc=="S":
     ape=input("Ingrese apellido: ")
@@ -85,6 +85,7 @@ for i in range(len(A)):
     if b==False:
         dicdec={"disciplina":dep_actual,"cantidad":1}
         C.append(dicdec)
+
 C.sort(key=lambda x:x["cantidad"], reverse=True)
 
 for i in range(len(C)):

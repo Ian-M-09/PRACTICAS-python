@@ -34,7 +34,7 @@ while opc=="s":
         if b==True:
             lista_espera.insert(pos,[nombre,num_personas,tipo_reserva])
         else:
-            lista_espera.append([nombre,num_personas,tipo_reserva])
+            lista_espera.insert(0,[nombre,num_personas,tipo_reserva])
     else:
         lista_espera.append([nombre,num_personas,tipo_reserva])
     opc=input("ingresar un cliente? si/no:")[0]
