@@ -22,4 +22,3 @@ while opc=="S":
         i+=1
     diccionario={"ID":id_prd,"Nombre":nombre,"Categoria":cat}
     A.insert(pos,diccionario)
-    
