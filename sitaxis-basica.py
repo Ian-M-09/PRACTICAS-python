@@ -104,7 +104,7 @@ vec.remove(3)
 posicion = vec.index(2)#te devuelve la posicion del elemento 2 
 existe = 2 in vec      
 
-vec.sort(key=lambda x:x[2],)#ordena de menor a mayor   
+vec.sort(key=lambda x:x[2])#ordena de menor a mayor   
 
 vec.sort(reverse=True)#ordena de mayor a menor
 vec.reverse()           
