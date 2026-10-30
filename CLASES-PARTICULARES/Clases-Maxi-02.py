@@ -7,6 +7,7 @@ while opc=="S":
     b=False
     for i in range(len (A)):
         if A[i]["ID"]==id_prd:
+        #if A[i][0]==id_prd:
             b=True
     if b==True:
         print("el id ya existe")
@@ -20,5 +21,9 @@ while opc=="S":
             pos=i
             b1=True
         i+=1
-    diccionario={"ID":id_prd,"Nombre":nombre,"Categoria":cat}
-    A.insert(pos,diccionario)
+        diccionario={"ID":id_prd,"Nombre":nombre,"Categoria":cat}#te permite guardar datos de distintos tipos en una posicion del vector
+        #(diccionario)estructura de datos que me permite guardar varibales/informacion, en pares de "clave":valor, al llamar a una clave me devuelve el valor asignado a esa clave
+        #estruc=[id_prd,nombre,cat]
+        #(estructura) estrucura de datos que me permite guardar distintas variables (distintos tipos)  
+        A.insert(pos,diccionario)
+    opc=input("desea seguir cargando: si/no ")[0].upper()

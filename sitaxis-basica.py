@@ -53,7 +53,13 @@ vector = []
 diccionario1 = {"nombre": "Ana", "edad": 25,"dni": 12345678}
 diccionario2 = {"nombre": "Ian", "edad": 30}
 #sintaxis de diccionario: {clave1: valor1, clave2: valor2, ...}
-
+"""
+"Un diccionario en Python es una estructura de datos que almacena la información
+mediante pares de Clave-Valor, en lugar de usar índices numéricos secuenciales. 
+Funciona como una agenda o un catálogo: en vez de buscar un dato por su posición 
+matemática (0, 1, 2), se busca directamente por su nombre o etiqueta (la Clave) para
+obtener su contenido (el Valor).
+"""
 # Agregar diccionarios a la lista
 vector.append(diccionario1)
 vector.append(diccionario2)
@@ -67,6 +73,7 @@ vector.sort(key=lambda x:x["edad"])#va a ordenar el vector B por edades de menor
 # En 'lambda x: x["edad"]', 'x' es el diccionario que entra como parámetro, 
 # y la función le devuelve el valor de x["edad"] al método sort() para que sepa qué comparar.
 # Mostrar el vector completo
+
 print("Vector con diccionarios:", vector)
 
 # Acceder al primer diccionario
@@ -131,7 +138,7 @@ for i in range(n-1):
             arr_seleccion[j]=aux
 print("Ordenado por seleccion:", arr_seleccion)
 
-
+#ordenamiento por insercion 
 n=int(input("ingrese el tamaño del vector:"))
 v=[]
 v.append(int(input("ingrese el primer numero:")))
@@ -144,7 +151,6 @@ for i in range (1,n):
         j=j-1
     v[j+1]=aux
 print("ordenado por insercion:",v)
-
 
 arr_burbuja = [64, 25, 12, 22, 11]
 n = len(arr_burbuja)
