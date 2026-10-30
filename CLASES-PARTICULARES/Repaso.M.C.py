@@ -4,7 +4,6 @@ B.sort(key=lambda x:x["Apellido"])
 lambda palabra reservada para declarar funciones sin nombre (anonimas)
 key guarda los datos que le pasa x[Apellido]
 x es como el que "pasa" el dato (es la variable que se pasa como parametro a la funcino anonima definida con lambda)
-
 """
 A=[]
 for i in range(len(A)):#range(inicio,fin,paso). si quiero que salte de 2 en 2 cambio el paso a 2 y asi sucesivamente 

@@ -18,7 +18,6 @@ while evento != "FIN":
         print("El evento ya fue ingresado.")
         
     evento = input("Ingrese tipo de evento válido (FIN para terminar): ")
-
 # b) Cargar eventos y horas en un nuevo vector
 registro_eventos = []
 print("\n--- Carga de registro de eventos ---")
